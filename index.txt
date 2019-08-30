@@ -1,7 +1,15 @@
-This is my intro
+Jacob - 1
 
-Current
+I am a senior working towards a bachelors degree in Computer Science with an emphasis on Core Computer Science. Hopefully graduating in Spring 2020.
 
-Past
+I have done some small projects when I went to Platte County High School to get myself a start at the different areas of computer science. I originally wanted to get into game design but found myself not being fond of it once I had actually taken a course on it in high school. I found myself looking fondly on Data Management when I took some courses here at NWMSU. Unfortunately some of the classes that I would need to take to finish that emphasis area were not available this semester so I had to switch to a core computer science emphasis. 
 
-Future
+I am hoping that I can get a job in a data management center once I graduate. My dream job would be to work at a space exploration/advancement organization such as NASA or SpaceX. I have always had a love for space and the wonders that it can bring and I have wanted to be a part of the advancement of that for a long time. 
+
+Some interesting things about me is that I play Trombone in the BMB and I have lived in Germany for seven years of my life.
+
+You can find my Git account and LinkedIn profile here respectively:
+
+https://github.com/JacobTaylorNWMSU (Links to an external site.)
+
+https://www.linkedin.com/in/jacob-taylor-4a5590149/
