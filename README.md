@@ -34,3 +34,4 @@ Some of these resources are useful you want to learn to remember markdown, but y
 ## Contributors
 My name is Jacob Taylor and I am a senior here at NWMSU working towards my bachelors degree in Computer Science. Below you will see one of my favorite pictures that shows me with my girlfriend Gina. 
 ![alt-text](https://github.com/JacobTaylorNWMSU/P1/blob/master/IMG_0022.JPG?raw=true)
+
