@@ -20,8 +20,10 @@ Aside from getting a github profile in order to create repositories you would ne
         - [Git-Bash Tutorials](https://www.atlassian.com/git/tutorials/git-bash)
 - [Visual Studio Code](https://code.visualstudio.com/)
     - With this tool it's a bit different than the others as there are many different languages you could use this for. But you would need to know how to use Markdown (Which a little cheatsheet can be found down in the resources to help with that) in order to be able to create a git page. 
+
 ## Recommended Resources
 Some of these resources are useful you want to learn to remember markdown, but you can also use places like Stack Overflow to find more specific information about really anything programming. I would also recommend Khan Academy, a resource that I used back in high school that can freely help someone learn topics like math and computing. 
+
 - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)
     - This cheatsheet is great because you will be able to find out how you implement certain elements in markdown that you may forget.
 - [Stack Overflow](https://stackoverflow.com/)
