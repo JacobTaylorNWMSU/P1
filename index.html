@@ -1,373 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <title>Jacob Taylor</title>
-    <style>
-
-    /* This is for the background, page height, and text options */
-    body {
-        margin:0px;
-        color:white;
-        background: url('galaxy.jpg');
-        background-repeat: no-repeat;
-        background-size:cover;
-        background-attachment: fixed;
-        height: 1450px;  /*Used in this example to enable scrolling */
-    }
-
-    .footer {
-        overflow:hidden;
-        background-color: rgb(26, 4, 78, 80);
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        z-index: 500;
-    }
-    .footer a {
-        float: left;
-        display: block;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 12px 14px;
-        text-decoration: none;
-        font-size: 12px;
-    }
-    .footer a:hover {
-        background: #ddd;
-        color: black;
-    }
-
-    /* Next few ones are for the navbar */
-    .navbar {
-        overflow: hidden;
-        background-color: rgb(26, 4, 78, 80);
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 500;
-    }
-    .navbar a {
-        float: left;
-        display: block;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-    }
-    .navbar a:hover {
-        background: #ddd;
-        color: black;
-    }
-    
-    /* This is for the buttons on the links box */
-    .coolbttn {
-        background-color: DodgerBlue;
-        border-width: 1px;
-        border-color: black;
-        color: white;
-        padding: 12px 16px;
-        font-size: 16px;
-        cursor: pointer;
-        border-radius: 25px;
-        display: inline-block;
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <title>Jacob Taylor</title>
         
-    }
+        <style>
 
-    .circleImg{
-        border-radius: 50%;
-        float:left;
-        position:relative;
-    }
+        /* This is for the background, page height, and text options */
+        body {
+            margin:0px;
+            color:white;
+            background: url('galaxy.jpg');
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-attachment: fixed;
+            height: 1450px;  /*Used in this example to enable scrolling */
+        }
 
-    /* This is for the Links box on the side */
-    .contact{
-        margin: 0px;
-        padding: 16px;
-        margin-top: 10px;
-        border-radius: 25px;
-        background-color: rgb(146, 64, 146, .85);
-        width: 170px;
-        height: 200px;
-        position:absolute;
-        top:50%;
-        left:95%;
-        margin-top:-50px; /* this is half the height of your div*/  
-        margin-left:-250px; /*this is half of width of your div*/
-    }
+        .footer {
+            overflow:hidden;
+            background-color: rgb(26, 4, 78, 80);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 500;
+        }
+        .footer a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .footer a:hover {
+            background: #ddd;
+            color: black;
+        }
 
-    .languagelist{
-        margin: 0px;
-        padding: 16px;
-        margin-top:10px;
-        border-radius:25px;
-        background-color: rgb(146, 64, 146, .85);
-        width:200px;
-        position:absolute;
-        top: 50%;
-        left: 25%;
-        margin-top: -50px;
-        margin-left:-250px;
-    }
-
-    .heroeslist{
-        margin: 0px;
-        padding: 16px;
-        margin-top:10px;
-        border-radius:25px;
-        background-color: rgb(146, 64, 146, .85);
-        width:200px;
-        position:absolute;
-        top: 650px;
-        left: 25%;
-        margin-top: -50px;
-        margin-left:-250px;
-    }
-
-    .music{
-        margin: 0px;
-        padding: 16px;
-        margin-top:10px;
-        border-radius:25px;
-        background-color: rgb(146, 64, 146, .85);
-        width:450px;
-        position:absolute;
-        top: 1000px;
-        left: 50%;
-        margin-top: -50px;
-        margin-left:-250px;
-        height: 400px;
-    }
-
-    table{
-        color: #333;
-        font-family: Helvetica, Arial, sans-serif;
-        width: 300px;
-        /* Table reset stuff */
-        border-collapse: collapse; border-spacing: 0; 
-    }
-
-    td, th {  border: 0 none; height: 30px; }
-			
-    th {
-    /* Gradient Background */
-        background: linear-gradient(rgb(39, 21, 141) 0%,rgb(18, 172, 126) 100%);
-        color: #FFF; font-weight: bold;
-        height: 40px;
-    }
+        /* Next few ones are for the navbar */
+        .navbar {
+            overflow: hidden;
+            background-color: rgb(26, 4, 78, 80);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 500;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .navbar a:hover {
+            background: #ddd;
+            color: black;
+        }
+        
+        /* This is for the buttons on the links box */
+        .coolbttn {
+            background-color: DodgerBlue;
+            border-width: 1px;
+            border-color: black;
+            color: white;
+            padding: 12px 16px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 25px;
+            display: inline-block;
             
-    td { background: #FAFAFA; text-align: center; }
+        }
 
-    /* Zebra Stripe Rows */
-            
-    tr:nth-child(even) td { background: #EEE; } 
-    tr:nth-child(odd) td { background: #FDFDFD; }
+        .circleImg{
+            border-radius: 50%;
+            float:left;
+            position:relative;
+        }
 
-    /* First-child blank cells! */
-    tr td:first-child, tr th:first-child { 
-        background: none; 
-        font-style: italic;
-        font-weight: bold;
-        font-size: 14px;
-        text-align: right;
-        padding-right: 10px;
-        width: 30px; 
-    }
+        /* This is for the Links box on the side */
+        .contact{
+            margin: 0px;
+            padding: 16px;
+            margin-top: 10px;
+            border-radius: 25px;
+            background-color: rgb(146, 64, 146, .85);
+            width: 170px;
+            height: 200px;
+            position:absolute;
+            top:50%;
+            left:95%;
+            margin-top:-50px; /* this is half the height of your div*/  
+            margin-left:-250px; /*this is half of width of your div*/
+        }
 
-    /* Add border-radius to specific cells! */
-    tr:first-child th:nth-child(2) { 
-    border-radius: 5px 0 0 0; 
-    } 
+        .languagelist{
+            margin: 0px;
+            padding: 16px;
+            margin-top:10px;
+            border-radius:25px;
+            background-color: rgb(146, 64, 146, .85);
+            width:200px;
+            position:absolute;
+            top: 50%;
+            left: 25%;
+            margin-top: -50px;
+            margin-left:-250px;
+        }
 
-    tr:first-child th:last-child { 
-    border-radius: 0 5px 0 0; 
-    }
+        .heroeslist{
+            margin: 0px;
+            padding: 16px;
+            margin-top:10px;
+            border-radius:25px;
+            background-color: rgb(146, 64, 146, .85);
+            width:200px;
+            position:absolute;
+            top: 650px;
+            left: 25%;
+            margin-top: -50px;
+            margin-left:-250px;
+        }
 
-    /* This is for the main part of the page for all the paragraphs and the boxes behind them */
-    .main {
-        margin: 0px;
-        padding: 16px;
-        margin-top: 10px;
-        border-radius: 25px;
-        background-color: rgb(146, 64, 146, .85);
-        width: 450px;
-        position:absolute;
-        top:25%;
-        left:50%;
-        margin-top:-50px; /* this is half the height of your div*/  
-        margin-left:-250px; /*this is half of width of your div*/
-    }
+        .music{
+            margin: 0px;
+            padding: 16px;
+            margin-top:10px;
+            border-radius:25px;
+            background-color: rgb(146, 64, 146, .85);
+            width:450px;
+            position:absolute;
+            top: 1000px;
+            left: 50%;
+            margin-top: -50px;
+            margin-left:-250px;
+            height: 400px;
+        }
 
-    .additionalInfo{
-        margin: 0px;
-        padding: 16px;
-        margin-top: 10px;
-        border-radius: 25px;
-        background-color: rgb(146, 64, 146, .85);
-        width: 300px;
-        height: 200px;
-        position:absolute;
-        top:575px;
-        left:90%;
-        margin-top:-50px; /* this is half the height of your div*/  
-        margin-left:-250px; /*this is half of width of your div*/
-    }
+        table{
+            color: #333;
+            font-family: Helvetica, Arial, sans-serif;
+            width: 300px;
+            /* Table reset stuff */
+            border-collapse: collapse; border-spacing: 0; 
+        }
 
-    .cat{
-        margin: 0px;
-        padding: 16px;
-        margin-top: 10px;
-        border-radius: 25px;
-        background-color: rgb(146, 64, 146, .85);
-        width: 300px;
-        position:absolute;
-        top:825px;
-        left:90%;
-        margin-top:-50px; /* this is half the height of your div*/  
-        margin-left:-250px; /*this is half of width of your div*/
-    }
+        td, th {  border: 0 none; height: 30px; }
+                
+        th {
+        /* Gradient Background */
+            background: linear-gradient(rgb(39, 21, 141) 0%,rgb(18, 172, 126) 100%);
+            color: #FFF; font-weight: bold;
+            height: 40px;
+        }
+                
+        td { background: #FAFAFA; text-align: center; }
 
-    </style>
-</head>
-<body>
-    <div class="navbar">
-        <img class="circleImg" src = "ProfilePicture.jpg" style = "width:50px; height:50px;">
-        <a href="index.html">Home</a>
-        <a href="#clickMe">Fun Thing</a>
-        <a href="#contact">Contact Me</a>
-    </div>
+        /* Zebra Stripe Rows */
+                
+        tr:nth-child(even) td { background: #EEE; } 
+        tr:nth-child(odd) td { background: #FDFDFD; }
 
-    <div class = "footer">
-        <a href = "#thanks">References</a>
-    </div>
+        /* First-child blank cells! */
+        tr td:first-child, tr th:first-child { 
+            background: none; 
+            font-style: italic;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: right;
+            padding-right: 10px;
+            width: 30px; 
+        }
 
-    <div class = "additionalInfo">
-        <h3 align = "center">Favorite Music</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Band Name</th>
-                    <th>Ranking</th>
-                    <th>Favorite Song</th>
-                    <th>Year Made</th> 
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Joji</td>
-                    <td>1</td>
-                    <td>Sanctuary</td>
-                    <td>2019</td>
-                </tr>
-                <tr>
-                    <td>SOAD</td>
-                    <td>2</td>
-                    <td>Aerials</td>
-                    <td>2001</td>
-                </tr>
-                <tr>
-                    <td>NetNobody</td>
-                    <td>3</td>
-                    <td>LA Lights</td>
-                    <td>2017</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+        /* Add border-radius to specific cells! */
+        tr:first-child th:nth-child(2) { 
+        border-radius: 5px 0 0 0; 
+        } 
 
-    <div class = "languagelist">
-        <h2>Favorite Programming Languages</h2>
-        <p>
-            Here you can see my top 5 favorite programming languages to program in
-        </p>
-        <ol type = 1>
-            <li>Java</li>
-            <li>Python</li>
-            <li>HTML</li>
-            <li>Javascript</li>
-            <li>SQL</li>
-        </ol>
-    </div>
+        tr:first-child th:last-child { 
+        border-radius: 0 5px 0 0; 
+        }
 
-    <div class = "heroeslist">
-        <h2>My Heroes</h2>
-        <p>
-            This is a list of some of the many people that I look up to in life
-        </p>
-        <ul>
-            <li>My Parents</li>
-            <li>Bob Ross</li>
-            <li>Mark Hamill</li>
-            <li>Serj Tankian</li>
-            <li>Neil Degrasse Tyson</li>
-            <li>David Bowie</li>
-        </ul>
-    </div>
+        /* This is for the main part of the page for all the paragraphs and the boxes behind them */
+        .main {
+            margin: 0px;
+            padding: 16px;
+            margin-top: 10px;
+            border-radius: 25px;
+            background-color: rgb(146, 64, 146, .85);
+            width: 450px;
+            position:absolute;
+            top:25%;
+            left:50%;
+            margin-top:-50px; /* this is half the height of your div*/  
+            margin-left:-250px; /*this is half of width of your div*/
+        }
 
-    <div class = "contact">
-        <h2>My Links:</h2>    
-        <aside>
-            You can find my some of my different accounts here:
-            <br>
-            <button class = "coolbttn" onclick = "window.open('https://www.facebook.com/jacob.taylor.543908','_blank')"><i class="fab fa-facebook fa-lg"></i></button>
-            <button class = "coolbttn" onclick = "window.open('https://www.youtube.com/channel/UCmM70HbhI0wodHJNw1AQJYA?view_as=subscriber','_blank')"><i class="fab fa-youtube fa-lg"></i></button><br>
-            <button class = "coolbttn" onclick = "window.open('https://github.com/JacobTaylorNWMSU','_blank')"><i class="fab fa-github fa-lg"></i></button>
-            <button class = "coolbttn" onclick = "window.open('https://www.linkedin.com/in/jacob-taylor-4a5590149/','_blank')"><i class="fab fa-linkedin-in fa-lg"></i></button>
+        .additionalInfo{
+            margin: 0px;
+            padding: 16px;
+            margin-top: 10px;
+            border-radius: 25px;
+            background-color: rgb(146, 64, 146, .85);
+            width: 300px;
+            height: 200px;
+            position:absolute;
+            top:575px;
+            left:90%;
+            margin-top:-50px; /* this is half the height of your div*/  
+            margin-left:-250px; /*this is half of width of your div*/
+        }
 
-        </aside>
-    </div>
+        .cat{
+            margin: 0px;
+            padding: 16px;
+            margin-top: 10px;
+            border-radius: 25px;
+            background-color: rgb(146, 64, 146, .85);
+            width: 300px;
+            position:absolute;
+            top:825px;
+            left:90%;
+            margin-top:-50px; /* this is half the height of your div*/  
+            margin-left:-250px; /*this is half of width of your div*/
+        }
 
-    <div class = "cat">
-        <p>Here is a picture of my and my lovely girlfriend Gina</p>
-        <img src = "couplepic.jpg" height="350"; width="200";align="middle" style="display: block; margin-left: auto; margin-right: auto; z-index: 1;">
-    </div>
+        #interest{
+            text-align:center;
+        }
 
-    <div class="main">
-    <h1 align = "center"><u>About Me</u></h1>
-    <section>
-        <h3><i>Current:</i></h3>
-        <p>
-            I am a senior working towards a bachelors degree in Computer Science with an emphasis on Core Computer Science. I am also the Secretary for the NWMSU chapter of Phi Mu Alpha. Hopefully I will be graduating in Spring 2020.
-        </p>
-    </section>
-    
-    <section>
-        <h3><i>Background:</i></h3>
-        <p>
-            I have done some small projects when I went to Platte County High School to get myself a start at the different areas of computer science. I originally wanted to get into game design but found myself not being fond of it once I had actually taken a course on it in high school. I found myself looking fondly on Data Management when I took some courses here at NWMSU. Unfortunately some of the classes that I would need to take to finish that emphasis area were not available this semester so I had to switch to a core computer science emphasis. I have worked a lot with many different languages like Java, Javascript, Python, HTML, etc. and have plenty of experience in each.
-        </p>
-    </section>
+        #aboutme{
+            text-align:center;
+        }
 
-    <section>
-        <h3><i>Future:</i></h3>
-        <p>
-            I am hoping that I can get a job in a data management center once I graduate. My dream job would be to work at a space exploration/advancement organization such as NASA or SpaceX. I have always had a love for space and the wonders that it can bring and I have wanted to be a part of the advancement of that for a long time. 
-        </p>
-        <aside>
-            In case you don't know, NASA is an independent space agency responsible for the civilian space program along with aeronautic and aerospace research.
-        </aside>
-    </section>
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <img class="circleImg" src = "ProfilePicture.jpg" style = "width:50px; height:50px;">
+            <a href="index.html">Home</a>
+            <a href="degree.html">Fun Thing</a>
+            <a href="contactme.html">Contact Me</a>
+        </div>
 
-    <section>
-        <h3><i>Interesting Things About Me:</i></h3>
-        <p>
-            Some interesting things about me is that I play Trombone in the BMB and I have lived in Germany for seven years of my life.
-        </p>
-    </section>
-    </div>
-    <div class = "music">
-        <section>
+        <div class = "footer">
+            <a href = "references.html">References</a>
+        </div>
+
+        <div class = "additionalInfo">
+            <h3 align = "center">Favorite Music</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Band Name</th>
+                        <th>Ranking</th>
+                        <th>Favorite Song</th>
+                        <th>Year Made</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Joji</td>
+                        <td>1</td>
+                        <td>Sanctuary</td>
+                        <td>2019</td>
+                    </tr>
+                    <tr>
+                        <td>SOAD</td>
+                        <td>2</td>
+                        <td>Aerials</td>
+                        <td>2001</td>
+                    </tr>
+                    <tr>
+                        <td>NetNobody</td>
+                        <td>3</td>
+                        <td>LA Lights</td>
+                        <td>2017</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class = "languagelist">
+            <h2>Favorite Programming Languages</h2>
             <p>
-                Here is what I am currently listening to a lot
+                Here you can see my top 5 favorite programming languages to program in
             </p>
-            <iframe width="440" height="315" src="https://www.youtube.com/embed/Ye9hGotPPVk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <ol type = 1>
+                <li>Java</li>
+                <li>Python</li>
+                <li>HTML</li>
+                <li>Javascript</li>
+                <li>SQL</li>
+            </ol>
+        </div>
+
+        <div class = "heroeslist">
+            <h2>My Heroes</h2>
+            <p>
+                This is a list of some of the many people that I look up to in life
+            </p>
+            <ul>
+                <li>My Parents</li>
+                <li>Bob Ross</li>
+                <li>Mark Hamill</li>
+                <li>Serj Tankian</li>
+                <li>Neil Degrasse Tyson</li>
+                <li>David Bowie</li>
+            </ul>
+        </div>
+
+        <div class = "contact">
+            <h2>My Links:</h2>    
+            <aside>
+                You can find my some of my different accounts here:
+                <br>
+                <button class = "coolbttn" onclick = "window.open('https://www.facebook.com/jacob.taylor.543908','_blank')"><i class="fab fa-facebook fa-lg"></i></button>
+                <button class = "coolbttn" onclick = "window.open('https://www.youtube.com/channel/UCmM70HbhI0wodHJNw1AQJYA?view_as=subscriber','_blank')"><i class="fab fa-youtube fa-lg"></i></button><br>
+                <button class = "coolbttn" onclick = "window.open('https://github.com/JacobTaylorNWMSU','_blank')"><i class="fab fa-github fa-lg"></i></button>
+                <button class = "coolbttn" onclick = "window.open('https://www.linkedin.com/in/jacob-taylor-4a5590149/','_blank')"><i class="fab fa-linkedin-in fa-lg"></i></button>
+
+            </aside>
+        </div>
+
+        <div class = "cat">
+            <p>Here is a picture of my and my lovely girlfriend Gina</p>
+            <img src = "couplepic.jpg" height="350"; width="200";align="middle" style="display: block; margin-left: auto; margin-right: auto; z-index: 1;">
+        </div>
+
+        <div class="main">
+        <h1 id="aboutme"><u>About Me</u></h1>
+        <section>
+            <h3><i>Current:</i></h3>
+            <p>
+                I am a senior working towards a bachelors degree in Computer Science with an emphasis on Core Computer Science. I am also the Secretary for the NWMSU chapter of Phi Mu Alpha. Hopefully I will be graduating in Spring 2020.
+            </p>
         </section>
-    </div>
+        
+        <section>
+            <h3><i>Background:</i></h3>
+            <p>
+                I have done some small projects when I went to Platte County High School to get myself a start at the different areas of computer science. I originally wanted to get into game design but found myself not being fond of it once I had actually taken a course on it in high school. I found myself looking fondly on Data Management when I took some courses here at NWMSU. Unfortunately some of the classes that I would need to take to finish that emphasis area were not available this semester so I had to switch to a core computer science emphasis. I have worked a lot with many different languages like Java, Javascript, Python, HTML, etc. and have plenty of experience in each.
+            </p>
+        </section>
+
+        <section>
+            <h3><i>Future:</i></h3>
+            <p>
+                I am hoping that I can get a job in a data management center once I graduate. My dream job would be to work at a space exploration/advancement organization such as NASA or SpaceX. I have always had a love for space and the wonders that it can bring and I have wanted to be a part of the advancement of that for a long time. 
+            </p>
+            <aside>
+                In case you don't know, NASA is an independent space agency responsible for the civilian space program along with aeronautic and aerospace research.
+            </aside>
+        </section>
+
+        <section>
+            <h3><i>Interesting Things About Me:</i></h3>
+            <p id = "interest">
+                Some interesting things about me is that I play Trombone in the BMB and I have lived in Germany for seven years of my life.
+            </p>
+        </section>
+        </div>
+
+        <div class = "music">
+            <section>
+                <p>
+                    Here is what I am currently listening to a lot
+                </p>
+                <iframe width="440" height="315" src="https://www.youtube.com/embed/Ye9hGotPPVk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+        </div>
+
     </body>
 </html>
 

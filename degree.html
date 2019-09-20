@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Jacob Taylor</title>
+    <style>
+
+    /* This is for the background, page height, and text options */
+    body {
+        margin:0px;
+        color:white;
+        background: url('galaxy.jpg');
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-attachment: fixed;
+    }
+
+    /* Next few ones are for the navbar */
+    .navbar {
+        overflow: hidden;
+        background-color: rgb(26, 4, 78, 80);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 500;
+    }
+    .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    .navbar a:hover {
+        background: #ddd;
+        color: black;
+    }
+    .circleImg{
+        border-radius: 50%;
+        float:left;
+        position:relative;
+    }
+
+    .footer {
+        overflow:hidden;
+        background-color: rgb(26, 4, 78, 80);
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 500;
+    }
+    .footer a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    .footer a:hover {
+        background: #ddd;
+        color: black;
+    }
+
+    .main {
+        margin: 0px;
+        padding: 16px;
+        margin-top: 10px;
+        border-radius: 25px;
+        background-color: rgb(146, 64, 146, .85);
+        width: 450px;
+        position:absolute;
+        top:25%;
+        left:50%;
+        margin-top:-50px; /* this is half the height of your div*/  
+        margin-left:-250px; /*this is half of width of your div*/
+    }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img class="circleImg" src = "ProfilePicture.jpg" style = "width:50px; height:50px;">
+        <a href="index.html">Home</a>
+        <a href="degree.html">Fun Thing</a>
+        <a href="contactme.html">Contact Me</a>
+    </div>
+
+    <div class = "footer">
+            <a href = "references.html">References</a>
+    </div>
+
+    <div class = "main">
+        <h2>Temperature Converter</h2>
+        <p>Type a value into any of the fields and it'll output the other temperatures</p>
+        <p>
+            <label>Fahrenheit</label>
+            <input id="f" onkeyup="convert('F')">
+        </p>
+        <p>
+            <label>Celcius</label> 
+            <input id="c" onkeyup="convert('C')">
+        </p>
+
+        <script>
+        function convert(degree) {
+            var x;
+            if (degree == "C") {
+                x = document.getElementById("c").value * 9 / 5 + 32;
+                document.getElementById("f").value = Math.round(x);
+            } else {
+                x = (document.getElementById("f").value -32) * 5 / 9;
+                document.getElementById("c").value = Math.round(x);
+            }
+        }
+        </script>
+    </div>
+
+</body>
