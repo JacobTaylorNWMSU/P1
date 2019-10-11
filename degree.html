@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
     <title>Jacob Taylor</title>
     <style>
 
@@ -69,16 +70,44 @@
         color: black;
     }
 
-    .main {
+    .temp {
         margin: 0px;
         padding: 16px;
         margin-top: 10px;
         border-radius: 25px;
         background-color: rgb(146, 64, 146, .85);
-        width: 450px;
+        width: 350px;
+        position:absolute;
+        top:25%;
+        left:20%;
+        margin-top:-50px; /* this is half the height of your div*/  
+        margin-left:-250px; /*this is half of width of your div*/
+    }
+
+    .ISSLocator{
+        margin: 0px;
+        padding: 16px;
+        margin-top: 10px;
+        border-radius: 25px;
+        background-color: rgb(146, 64, 146, .85);
+        width:400px;
         position:absolute;
         top:25%;
         left:50%;
+        margin-top:-50px; /* this is half the height of your div*/  
+        margin-left:-250px; /*this is half of width of your div*/
+    }
+
+    .volume {
+        margin: 0px;
+        padding: 16px;
+        margin-top: 10px;
+        border-radius: 25px;
+        background-color: rgb(146, 64, 146, .85);
+        width:400px;
+        position:absolute;
+        top:25%;
+        left:85%;
         margin-top:-50px; /* this is half the height of your div*/  
         margin-left:-250px; /*this is half of width of your div*/
     }
@@ -89,39 +118,143 @@
     <div class="navbar">
         <img class="circleImg" src = "ProfilePicture.jpg" style = "width:50px; height:50px;">
         <a href="index.html">Home</a>
-        <a href="degree.html">Convert Temp</a>
-        <a href="webapp.html">Web App</a>
+        <a href="degree.html">Fun Apps</a>
         <a href="contactme.html">Contact Me</a>
     </div>
 
     <div class = "footer">
             <a href = "references.html">References</a>
     </div>
+    <article>
+    <main class = "container-fluid">
 
-    <div class = "main">
+    <div class = "temp">
         <h2>Temperature Converter</h2>
         <p>Type a value into any of the fields and it'll output the other temperatures</p>
         <p>
             <label>Fahrenheit</label>
-            <input id="f" onkeyup="convert('F')">
+            <input id="inputFahrenheit" type="number" min="-459.66999999999996" placeholder="Fahrenheit" oninput="temperatureConverter(this.id,this.value)" onchange="temperatureConverter(this.id,this.value)">
         </p>
         <p>
-            <label>Celcius</label> 
-            <input id="c" onkeyup="convert('C')">
+            <label>Celsius</label>
+            <input id="inputCelsius" type="number" min="-273.15" placeholder="Celsius" oninput="temperatureConverter(this.id,this.value)" onchange="temperatureConverter(this.id,this.value)">
         </p>
-
+        <p>
+            <label>Kelvin</label>
+            <input id="inputKelvin" type="number" min="0" placeholder="Kelvin" oninput="temperatureConverter(this.id,this.value)" onchange="temperatureConverter(this.id,this.value)">
+        </p>
+        
         <script>
-        function convert(degree) {
-            var x;
-            if (degree == "C") {
-                x = document.getElementById("c").value * (9 / 5) + 32;
-                document.getElementById("f").value = Math.round(x);
-            } else {
-                x = (document.getElementById("f").value -32) * (5 / 9);
-                document.getElementById("c").value = Math.round(x);
+        function temperatureConverter(source,valNum) {
+            valNum = parseFloat(valNum);
+            var inputFahrenheit = document.getElementById("inputFahrenheit");
+            var inputCelsius = document.getElementById("inputCelsius");
+            var inputKelvin = document.getElementById("inputKelvin");
+            if (source=="inputFahrenheit") {
+                inputCelsius.value=((valNum-32)/1.8).toFixed(2);
+                inputKelvin.value=(((valNum-32)/1.8)+273.15).toFixed(2);
+            }
+            if (source=="inputCelsius") {
+                inputFahrenheit.value=((valNum*1.8)+32).toFixed(2);
+                inputKelvin.value=((valNum)+273.15).toFixed(2);
+            }
+            if (source=="inputKelvin") {
+                inputFahrenheit.value=(((valNum-273.15)*1.8)+32).toFixed(2);
+                inputCelsius.value=((valNum)-273.15).toFixed(2);
             }
         }
         </script>
     </div>
+
+    <div class = "volume">
+        <h1 align = "center">Box Volume</h1>
+        <p>
+            <label>Name</label>
+            <input id = "name" type="string" placeholder = "Your Name Here">
+            <br><br>
+            <label>Dimensions of Box (Inches):</label><br>
+            <label>Length </label><input id = "length" placeholder = "0" value = "0" size = "10"><br>
+            <label>Width </label><input id = "width" placeholder = "0" value = "0" size = "10"><br>
+            <label>Height </label><input id = "height" placeholder = "0" value = "0" size = "10">
+            <br><br>            
+            <button id = "calc">Calculate</button>
+            <button id = 'clear'>Clear</button><br><br>
+            <p id = "result"></p>
+        </p>
+        <script>
+            console.log('SCRIPT START')
+
+            console.log('Declare testable functions......................')
+
+            function volume(x, y, z) { return x * y * z }
+            console.log('Defined volume=' + volume)
+
+            window.addEventListener('load', (event) => {
+                console.log('  Starting initialization ')
+                if (localStorage.getItem('name')) {
+                    document.getElementById('name').value = localStorage.getItem('name')
+                    console.log(`  Stored guest = ${localStorage.name}`)
+                }
+                if (localStorage.getItem('length')) {
+                    document.getElementById('length').value = parseInt(localStorage.length)
+                    console.log(`  Stored length = ${localStorage.length}`)
+                }
+                if (localStorage.getItem('width')) {
+                    document.getElementById('width').value = parseInt(localStorage.width)
+                    console.log(`  Stored width = ${localStorage.width}`)
+                }
+                if (localStorage.getItem('height')) {
+                    document.getElementById('height').value = parseInt(localStorage.height)
+                    console.log(`  Stored height = ${localStorage.height}`)
+                }
+                console.log('  Finished initialization')
+            })
+
+            document.getElementById('calc').addEventListener('click', () => {
+                console.log('  Starting clicker click handler')
+                const origCount = parseInt(localStorage.getItem('countOfClicks')) || 0
+                const s = document.getElementById('name').value
+                console.log('s=' + s)
+                const i = parseInt(document.getElementById('length').value)
+                console.log('i=' + i)
+                const j = parseInt(document.getElementById('width').value)
+                console.log('j=' + j)
+                const k = parseInt(document.getElementById('height').value)
+                console.log('k=' + k)
+                const ct = origCount + 1
+                const ans = s + ', your volume is ' + volume(i, j, k) + '. This has been run ' + ct + ' times.'
+                document.getElementById('result').innerHTML = ans
+                localStorage.setItem('countOfClicks', ct)  // define a string key to store + its value
+                localStorage.setItem('name', s)
+                localStorage.setItem('length', i)
+                localStorage.setItem('width', j)
+                localStorage.setItem('height', k)
+                console.log('  Finished clicker click handler')
+            })
+
+            document.getElementById('clear').addEventListener('click', () => {
+                console.log('  Starting wiper click handler')
+                localStorage.removeItem('countOfClicks')
+                localStorage.removeItem('name')
+                localStorage.removeItem('length')
+                localStorage.removeItem('width')
+                localStorage.removeItem('height')
+                console.log('  Finished wiper click handler - localStorage entries removed')
+            })
+        </script>
+    </div>
+
+    <div class = "ISSLocator">
+        <h2 align = "center">Secret Button</h2>
+        <button id = "ISSPosition">Click Me!</button><br>
+        <p id = "ISSLocation"></p>
+        <script>
+            let response = await fetch("http://api.open-notify.org/iss-now.json");
+            let data = await response.json()
+            return data;
+        </script>
+    </div>
+</main>
+</article>
 </body>
 </html>
